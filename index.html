@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alt TRigger - オンライン家庭教師塾</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5',secondary:'#818CF8'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans JP', sans-serif;
+}
+.hero-section {
+background-size: cover;
+background-position: center right;
+position: relative;
+}
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0) 100%);
+z-index: 1;
+}
+.hero-content {
+position: relative;
+z-index: 2;
+}
+input:focus {
+outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm sticky top-0 z-10">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#top" id="logo-link" class="text-3xl font-bold tracking-wider relative group">
+<span class="relative z-10 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">Alt</span>
+<span class="relative z-10 ml-2 font-light text-blue-600">TRigger</span>
+<div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-400/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</a>
+<nav class="hidden md:flex space-x-8">
+<a href="#features" class="text-gray-700 hover:text-primary transition-colors">特徴</a>
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors">私たちについて</a>
+<a href="#trial" class="text-gray-700 hover:text-primary transition-colors">無料体験</a>
+<a href="#recruit" class="text-gray-700 hover:text-primary transition-colors">講師募集</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors">お問い合わせ</a>
+</nav>
+<div class="md:hidden flex items-center">
+<button class="text-gray-700 hover:text-primary w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full py-20" style="background-image: url('https://readdy.ai/api/search-image?query=A%20modern%20online%20education%20scene%20with%20a%20student%20learning%20on%20a%20tablet%20in%20a%20bright%2C%20minimalist%20room.%20The%20left%20side%20of%20the%20image%20has%20a%20clean%20white%20background%20that%20gradually%20transitions%20to%20the%20right%20side%20showing%20the%20student.%20Professional%20lighting%2C%20high-quality%20photography%20style%2C%20soft%20colors%2C%20perfect%20for%20website%20hero%20section.&width=1600&height=800&seq=hero1&orientation=landscape');">
+<div class="container mx-auto px-4 w-full">
+<div class="hero-content flex flex-col items-start max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">いつでもどこでも学べる<br>オンライン家庭教師塾</h1>
+<p class="text-xl text-gray-700 mb-8">あなたのライフスタイルに合わせた、<br>柔軟で効果的な学習環境をご提供します。</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#trial" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">無料体験を申し込む</a>
+<a href="#contact" class="border border-gray-300 text-gray-700 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">詳細を問い合わせる</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Alt TRiggerの特徴</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">一人ひとりに合わせたカスタマイズ学習で、確かな学力と自信を育てます</p>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-time-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">柔軟な学習スケジュール</h3>
+<p class="text-gray-600">あなたの都合に合わせて授業時間を設定。忙しい日常の中でも無理なく学習を継続できます。</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-book-open-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">多様な教科対応</h3>
+<p class="text-gray-600">国語、数学、英語など幅広い教科に対応。あなたの学びたい科目を自由に選択できます。</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-user-settings-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-3">個別最適化された指導</h3>
+<p class="text-gray-600">一人ひとりの学習ペース、強み、弱みを分析し、最適な学習プランを提案します。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ミーティング" class="rounded-lg shadow-lg w-full h-auto object-cover">
+
+</div>
+<div class="md:w-1/2">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">私たちについて</h2>
+<p class="text-lg text-gray-600 mb-6">どう頑張っても自分のライフスタイルと学習が合わず、何度も悩み、挫折を繰り返してきました。そんな中、学習の自由度、柔軟さ、そして「自分に合ったスタイルで学べる」環境の必要性を痛感し、Alt TRiggerを立ち上げました。</p>
+<p class="text-lg text-gray-600 mb-6">一人ひとりにとって最適な学び方を探し、確かな学力と自信を育てる。それが私たちの願いです。</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">お問い合わせ</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Free Trial Section -->
+<section id="trial" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto bg-gradient-to-r from-primary/5 to-secondary/5 p-10 rounded-xl shadow-md">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">無料体験授業</h2>
+<p class="text-lg text-gray-600">Alt TRiggerの授業を実際に体験してみませんか？</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8 mb-10">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-time-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">75分授業 × 4回</h3>
+<p class="text-gray-600">十分な時間をかけて、じっくりと授業を体験していただけます。</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<div class="w-12 h-12 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-money-dollar-circle-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-xl font-bold text-gray-900 mb-2">完全無料</h3>
+<p class="text-gray-600">料金は一切かかりません。安心してお申し込みください。</p>
+</div>
+</div>
+<div class="text-center">
+<a href="#contact" class="inline-block bg-primary text-white px-8 py-4 !rounded-button font-medium text-lg hover:bg-opacity-90 transition-colors whitespace-nowrap">無料体験を申し込む</a>
+
+<p class="mt-4 text-gray-500">お問い合わせ: tutorneo64@gmail.com</p>
+<p class="text-lg text-gray-600">
+  ※通常授業料は10分あたり320円（税込）です。無料体験中は一切費用はかかりません。
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recruitment Section -->
+<section id="recruit" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2 order-2 md:order-1">
+<h2 class="text-3xl font-bold text-gray-900 mb-6">講師募集</h2>
+<p class="text-lg text-gray-600 mb-8">Alt TRiggerでは、生徒の可能性を引き出す情熱ある講師を募集しています。オンラインで自分のスキルを活かしながら、柔軟な働き方を実現しませんか？</p>
+<div class="bg-white p-6 rounded-lg shadow-md mb-8">
+<h3 class="text-xl font-bold text-gray-900 mb-4">給与条件</h3>
+<div class="flex items-center mb-3">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-money-yen-circle-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="font-medium">時給: <span class="text-primary font-bold">1,700円</span></p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-time-line ri-lg text-primary"></i>
+</div>
+<div>
+<p class="font-medium">待機時: <span class="text-primary font-bold">1,163円</span></p>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="mailto:tutorneo64@gmail.com" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">応募する</a>
+<p class="text-gray-500 self-center">お問い合わせ: tutorneo64@gmail.com</p>
+</div>
+</div>
+<div class="md:w-1/2 order-1 md:order-2">
+<img src="https://readdy.ai/api/search-image?query=A%20professional%20Japanese%20online%20tutor%20teaching%20through%20a%20computer%20screen.%20The%20tutor%20is%20wearing%20smart%20casual%20attire%20and%20appears%20engaged%20and%20enthusiastic%20while%20explaining%20concepts.%20The%20setting%20is%20a%20bright%2C%20organized%20home%20office%20with%20educational%20materials%20visible.%20The%20image%20conveys%20professionalism%2C%20expertise%2C%20and%20the%20modern%20approach%20to%20online%20education.&width=600&height=600&seq=recruit1&orientation=squarish" alt="オンライン講師" class="rounded-lg shadow-lg w-full h-auto object-cover">
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">ご質問やお申し込みなど、お気軽にお問い合わせください。</p>
+
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400"></i>
+</div>
+</div>
+</div>
+<div class="md:col-span-2">
+<form
+  action="https://formspree.io/f/xyzjvpgo"
+  method="POST"
+  class="max-w-md mx-auto space-y-6 p-6 bg-white rounded-lg shadow-md"
+>
+  <div>
+    <label class="block mb-2 font-medium text-gray-700" for="email">メールアドレス</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      placeholder="your@email.com"
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+    />
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium text-gray-700" for="inquiryType">お問い合わせ種類</label>
+    <select
+      name="inquiryType"
+      id="inquiryType"
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary text-gray-400"
+      onchange="if(this.value !== '') this.classList.remove('text-gray-400'); else this.classList.add('text-gray-400');"
+    >
+      <option value="" selected>よろしければ選択してください</option>
+      <option value="trial" class="text-gray-900">無料体験について</option>
+      <option value="recruitment" class="text-gray-900">講師応募について</option>
+      <option value="service" class="text-gray-900">サービス内容について</option>
+      <option value="other" class="text-gray-900">その他</option>
+    </select>
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium text-gray-700" for="message">内容</label>
+    <textarea
+      name="message"
+      id="message"
+      rows="5"
+      required
+      placeholder="お問い合わせ内容を入力してください"
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+    ></textarea>
+  </div>
+
+  <div class="text-center">
+    <button
+      type="submit"
+      class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors"
+    >
+      送信
+    </button>
+  </div>
+</form>
+
+<label 
+
+
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-lg font-medium text-gray-700 mb-2">直接メールでのお問い合わせ</p>
+<a href="mailto:tutorneo64@gmail.com" class="text-primary hover:underline">tutorneo64@gmail.com</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<a href="#" class="text-2xl font-bold tracking-wider mb-4 inline-block">
+<span class="text-blue-400">Alt</span>
+<span class="ml-2 font-light text-blue-300">TRigger</span>
+</a>
+<p class="text-gray-400 mt-2">一人ひとりに合わせた最適な学習環境を提供します。</p>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-bold mb-4">サービス</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">オンライン授業</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">教科別コース</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">受験対策</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">学習サポート</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-bold mb-4">会社情報</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">私たちについて</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">講師紹介</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">採用情報</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">お問い合わせ</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-bold mb-4">フォローする</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-x-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-youtube-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-line-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400">© 2025 Alt TRigger. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">プライバシーポリシー</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">利用規約</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">特定商取引法に基づく表記</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.ri-menu-line').parentElement;
+const nav = document.querySelector('nav');
+menuButton.addEventListener('click', function() {
+if (nav.classList.contains('hidden')) {
+nav.classList.remove('hidden');
+nav.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'shadow-lg', 'p-4', 'rounded-lg', 'space-y-4');
+menuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+} else {
+nav.classList.add('hidden');
+nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'shadow-lg', 'p-4', 'rounded-lg', 'space-y-4');
+menuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+}
+});
+});
+</script>
+<script id="form-submit-script">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('contactForm');
+const submitMessage = document.getElementById('submitMessage');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(form);
+const subject = formData.get('subject');
+const message = `
+お名前: ${formData.get('name')}
+メールアドレス: ${formData.get('email')}
+件名: ${subject}
+お問い合わせ種類: ${formData.get('inquiry-type')}
+メッセージ:
+${formData.get('message')}
+`;
+const mailtoLink = document.createElement('a');
+mailtoLink.href = `mailto:tutorneo64@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+mailtoLink.click();
+setTimeout(() => {
+submitMessage.classList.remove('hidden');
+form.reset();
+}, 500);
+});
+});
+function closeSubmitMessage() {
+document.getElementById('submitMessage').classList.add('hidden');
+}
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#top') {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+} else {
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+}
+// Close mobile menu if open
+const nav = document.querySelector('nav');
+if (nav.classList.contains('absolute')) {
+nav.classList.add('hidden');
+nav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-4', 'bg-white', 'shadow-lg', 'p-4', 'rounded-lg', 'space-y-4');
+const menuButton = document.querySelector('.ri-close-line')?.parentElement;
+if (menuButton) {
+menuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+}
+}
+});
+});
+});
+</script>
+</body>
+</html>
